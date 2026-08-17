@@ -27,6 +27,9 @@
                 <a href="#experience">Experience</a>
             </li>
             <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
                 <a href="#projects">Projects</a>
             </li>
             <li>
@@ -55,8 +58,7 @@
 
                 <div class="btn-group">
                     <!-- <div class="btn">Download CV</div> -->
-                    <a href="Lisha_Chaudhari_Resume.pdf"
-                        download="Lisha_Chaudhari_CV.pdf" class="btn">Download CV</a>
+                    <a href="Lisha_Chaudhari_Resume.pdf" download="Lisha_Chaudhari_CV.pdf" class="btn">Download CV</a>
                     <a href="#contact" class="btn">Contact</a>
                 </div>
 
@@ -168,31 +170,20 @@
         <h3 class="column-title"><span>Experience</span></h3>
 
         <div class="tabs">
-
-            <button class="tab-btn active" data-tab="work">
-                Work
-            </button>
-
-            <!-- <button class="tab-btn" data-tab="internship">
-            Internship
-        </button> -->
-
-            <button class="tab-btn" data-tab="position">
-                Position
-            </button>
-
-            <button class="tab-btn" data-tab="virtual">
-                Virtual Experience
-            </button>
-
+            <button class="tab-btn active" data-tab="work">Work</button>
+            <button class="tab-btn" data-tab="position">Position</button>
+            <button class="tab-btn" data-tab="virtual">Virtual Experience</button>
         </div>
 
         <div class="experience-content">
 
-            <!-- Work -->
+            <!-- Work: ICICI Bank -->
             <div class="tab-content active" id="work">
                 <div class="card-top-info">
-                    <h3>ICICI Bank</h3>
+                    <div class="company-header">
+                        <img src="icici_bank.png" alt="ICICI Bank Logo" class="company-logo">
+                        <h3>ICICI Bank</h3>
+                    </div>
                     <span class="location-tag">Mumbai, India</span>
                 </div>
                 <h4>Deputy Manager II – Treasury IT</h4>
@@ -203,7 +194,6 @@
                     analytics for FX and derivative markets.
                 </p>
 
-                <!-- Details Button -->
                 <button class="details-btn" onclick="openModal('detailsModal')">
                     View Details
                 </button>
@@ -212,12 +202,14 @@
             <!-- Work Details Modal Overlay -->
             <div id="detailsModal" class="modal-overlay" onclick="closeModalOnOutsideClick(event, 'detailsModal')">
                 <div class="modal-card">
-
                     <div class="modal-header">
-                        <div>
-                            <h2>ICICI Bank</h2>
-                            <h3>Analyst - Deputy Manager II</h3>
-                            <span class="modal-meta">Aug 2023 – Jun 2025 | Mumbai, India</span>
+                        <div class="modal-title-group">
+                            <img src="icici_bank.png" alt="ICICI Bank Logo" class="modal-company-logo">
+                            <div>
+                                <h2>ICICI Bank</h2>
+                                <h3>Analyst - Deputy Manager II</h3>
+                                <span class="modal-meta">Aug 2023 – Jun 2025 | Mumbai, India</span>
+                            </div>
                         </div>
                         <button class="close-btn" onclick="closeModal('detailsModal')"
                             aria-label="Close modal">&times;</button>
@@ -241,14 +233,16 @@
                             <span class="skill-tag">Data Optimization</span>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- Position -->
+            <!-- Position: SPCE Robocon -->
             <div class="tab-content" id="position">
                 <div class="card-top-info">
-                    <h3>SPCE Robocon</h3>
+                    <div class="company-header">
+                        <img src="spce_robocon.jpg" alt="SPCE Robocon Logo" class="company-logo">
+                        <h3>SPCE Robocon</h3>
+                    </div>
                     <span class="location-tag">Mumbai, India</span>
                 </div>
                 <h4>Team Leader</h4>
@@ -259,7 +253,6 @@
                     during national Robocon competitions.
                 </p>
 
-                <!-- Details Button -->
                 <button class="details-btn" onclick="openModal('positionModal')">
                     View Details
                 </button>
@@ -268,12 +261,14 @@
             <!-- Position Details Modal Overlay -->
             <div id="positionModal" class="modal-overlay" onclick="closeModalOnOutsideClick(event, 'positionModal')">
                 <div class="modal-card">
-
                     <div class="modal-header">
-                        <div>
-                            <h2>SPCE Robocon</h2>
-                            <h3>Team Leader</h3>
-                            <span class="modal-meta">Leadership | Mumbai, India</span>
+                        <div class="modal-title-group">
+                            <img src="spce_robocon.jpg" alt="SPCE Robocon Logo" class="modal-company-logo">
+                            <div>
+                                <h2>SPCE Robocon</h2>
+                                <h3>Team Leader</h3>
+                                <span class="modal-meta">Leadership | Mumbai, India</span>
+                            </div>
                         </div>
                         <button class="close-btn" onclick="closeModal('positionModal')"
                             aria-label="Close modal">&times;</button>
@@ -296,14 +291,16 @@
                             <span class="skill-tag">Systems Engineering</span>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <!-- BCG Virtual Experience -->
             <div class="tab-content" id="virtual">
                 <div class="card-top-info">
-                    <h3>BCG</h3>
+                    <div class="company-header">
+                        <img src="bcg.png" alt="BCG Logo" class="company-logo">
+                        <h3>BCG</h3>
+                    </div>
                     <span class="location-tag">Virtual / Remote</span>
                 </div>
                 <h4>Data Science & Analytics Virtual Experience</h4>
@@ -314,7 +311,6 @@
                     engineering, and predictive modeling for power and energy clients.
                 </p>
 
-                <!-- Details Button -->
                 <button class="details-btn" onclick="openModal('bcgModal')">
                     View Details
                 </button>
@@ -323,12 +319,14 @@
             <!-- BCG Details Modal Overlay -->
             <div id="bcgModal" class="modal-overlay" onclick="closeModalOnOutsideClick(event, 'bcgModal')">
                 <div class="modal-card">
-
                     <div class="modal-header">
-                        <div>
-                            <h2>BCG</h2>
-                            <h3>Data Science & Analytics Virtual Experience</h3>
-                            <span class="modal-meta">Virtual Simulation | Remote</span>
+                        <div class="modal-title-group">
+                            <img src="bcg.png" alt="BCG Logo" class="modal-company-logo">
+                            <div>
+                                <h2>BCG</h2>
+                                <h3>Data Science & Analytics Virtual Experience</h3>
+                                <span class="modal-meta">Virtual Simulation | Remote</span>
+                            </div>
                         </div>
                         <button class="close-btn" onclick="closeModal('bcgModal')"
                             aria-label="Close modal">&times;</button>
@@ -352,12 +350,71 @@
                             <span class="skill-tag">EDA</span>
                         </div>
                     </div>
-
                 </div>
             </div>
 
         </div>
 
+    </section>
+
+    <section class="skills" id="skills">
+        <h3 class="section-title"><span>Technical Skills</span></h3>
+
+        <div class="skills-grid">
+
+            <!-- Category 1: Generative AI & NLP -->
+            <div class="skill-category">
+                <h4><i class="fas fa-brain"></i> Applied AI & NLP</h4>
+                <div class="skill-tags">
+                    <span class="tag">LLMs (Groq, Llama, Mistral)</span>
+                    <span class="tag">RAG Systems</span>
+                    <span class="tag">BERT / Sentence Transformers</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">ChromaDB (Vector DB)</span>
+                    <span class="tag">Hugging Face</span>
+                </div>
+            </div>
+
+            <!-- Category 2: Data Science & ML -->
+            <div class="skill-category">
+                <h4><i class="fas fa-chart-line"></i> Machine Learning & Analytics</h4>
+                <div class="skill-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Statistical Analysis & A/B Testing</span>
+                    <span class="tag">Time-Series Forecasting</span>
+                    <span class="tag">Classification & Clustering (DBSCAN)</span>
+                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">Pandas & NumPy</span>
+                </div>
+            </div>
+
+            <!-- Category 3: Data Engineering & Analytics -->
+            <div class="skill-category">
+                <h4><i class="fas fa-database"></i> Data Engineering & SQL</h4>
+                <div class="skill-tags">
+                    <span class="tag">SQL & Query Optimization</span>
+                    <span class="tag">ETL Pipelines</span>
+                    <span class="tag">MySQL & Oracle</span>
+                    <span class="tag">Snowflake</span>
+                    <span class="tag">PySpark</span>
+                    <span class="tag">Linux / Shell Scripting</span>
+                </div>
+            </div>
+
+            <!-- Category 4: Visualization & Cloud Tools -->
+            <div class="skill-category">
+                <h4><i class="fas fa-tools"></i> Analytics Tools & Deployment</h4>
+                <div class="skill-tags">
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Git & GitHub</span>
+                    <span class="tag">AWS EC2</span>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="projects" class="projects">
@@ -419,42 +476,53 @@
                 </div>
 
                 <h3>Hybrid Log Classification System</h3>
-                <p>Engineered a multi-stage NLP pipeline using BERT and Regex to accurately classify complex system logs
-                    at scale.</p>
+
+                <p>
+                    Built a multi-tiered pipeline combining Regex, BERT embeddings, and Groq LLM API to automatically
+                    classify system, application, and CRM logs into user actions, workflow errors, notifications, and
+                    deprecation warnings. Features DBSCAN clustering for pattern discovery.
+                </p>
 
                 <div class="tech-tags">
-                    <span class="tag">NLP</span>
-                    <span class="tag">BERT</span>
-                    <span class="tag">PyTorch</span>
+                    <span class="tag">Python</span>
                     <span class="tag">Regex</span>
+                    <span class="tag">SentenceTransformers</span>
+                    <span class="tag">BERT</span>
+                    <span class="tag">Groq LLM API</span>
+                    <span class="tag">DBSCAN</span>
+                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">Pandas</span>
                 </div>
-
                 <div class="btn-group">
-                    <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-                    <a href="#" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                    <a href="https://github.com/lishachaudhari/Log-Classification-System" target="_blank"
+                        class="btn btn-secondary">GitHub Repo</a>
                 </div>
             </div>
 
             <!-- Project 4 -->
             <div class="project-card">
                 <div class="card-img-container">
-                    <img src="fraud_analysis.png" alt="Credit Card Fraud Dashboard">
+                    <img src="Fraud_Analytics.png" alt="Credit Card Fraud Dashboard">
                 </div>
 
-                <h3>Credit Card Fraud Analysis</h3>
-                <p>Interactive analytics and forecasting dashboard visualizing transaction patterns and detecting
-                    anomalies across 1.2M+ records.</p>
+                <h3>Credit Card Fraud Analysis & Forecasting</h3>
+
+                <p>
+                    Built an interactive fraud analytics dashboard analyzing 1.2M+ credit card transactions to detect
+                    suspicious behavioral patterns and applied time-series forecasting to identify emerging fraud
+                    trends.
+                </p>
 
                 <div class="tech-tags">
                     <span class="tag">Tableau</span>
                     <span class="tag">Python</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Analytics</span>
+                    <span class="tag">Time-Series Analysis</span>
+                    <span class="tag">Fraud Analytics</span>
                 </div>
 
                 <div class="btn-group">
-                    <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-                    <a href="#" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                    <a href="https://public.tableau.com/views/Credit_Fraud/FraudKPIOverview?:language=en-GB&:sid=F0C1E66C54B94287B5CF3ADF1D6FBA9D-0:0&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        target="_blank" class="btn btn-primary">View Dashboard</a>
                 </div>
             </div>
 
@@ -471,8 +539,9 @@
             <!-- Direct Contact Links (Left Card) -->
             <div class="contact-info-card">
                 <h3>Let's Connect</h3>
-                <p>Exploring opportunities in Data Science & AI/ML. Whether you have an open role or a project to collaborate on, let’s connect!</p>
-                
+                <p>Exploring opportunities in Data Science & AI/ML. Whether you have an open role or a project to
+                    collaborate on, let’s connect!</p>
+
 
 
                 <div class="contact-links">

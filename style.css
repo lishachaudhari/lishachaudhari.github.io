@@ -564,6 +564,67 @@ li a:hover::before {
     box-shadow: 0 6px 15px rgba(168, 85, 247, 0.3);
 }
 
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/*===========================================
+SKILLS
+============================================*/
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.skill-category h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tags .tag {
+    background-color: #f3f0ff;
+    color: #6c5ce7;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ==========================================
    MODALS
    ========================================== */
@@ -690,6 +751,8 @@ li a:hover::before {
     margin: 0 auto;
 }
 
+
+
 /* Centered Header with Short Accent Line */
 .section-title {
     font-size: 2.25rem;
@@ -720,13 +783,25 @@ li a:hover::before {
     background: linear-gradient(90deg, #ec4899, #a855f7);
     border-radius: 2px;
 }
-
-/* Responsive 4-Card Grid */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
+
+.projects-grid .project-card {
+    flex: 0 0 calc(50% - 1rem); /* Takes exactly 50% width minus half the gap */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .projects-grid .project-card {
+        flex: 0 0 100%;
+    }
+}
+/* Responsive 4-Card Grid */
+
 
 .project-card {
     padding: 2rem 1.5rem;
