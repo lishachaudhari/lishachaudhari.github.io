@@ -1141,6 +1141,48 @@ SKILLS
 /* ==========================================
    9. RESPONSIVE MEDIA QUERIES
    ========================================== */
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px; /* Adjust according to your navbar height */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 350px;
+    
+    /* FIX 1: Solid background so text behind it doesn't show through */
+    background-color: #ffffff !important; 
+    
+    /* FIX 2: High z-index to stay above all hero section elements */
+    z-index: 9999 !important; 
+    
+    /* Aesthetics & spacing */
+    border-radius: 16px;
+    padding: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #2b2d42; /* Clear dark text */
+    font-weight: 600;
+  }
+}
+
 @media (max-width: 768px) {
     header {
         width: 90%;
