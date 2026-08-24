@@ -571,8 +571,8 @@ li a:hover::before {
 }
 
 .company-logo {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
     border-radius: 4px;
 }
@@ -624,7 +624,6 @@ SKILLS
     }
 }
 
-
 /* ==========================================
    MODALS
    ========================================== */
@@ -651,12 +650,15 @@ SKILLS
 }
 
 .modal-card {
-    background: #ffffff;
     width: 90%;
-    max-width: 620px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 550px;
+    max-height: 85vh;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     transform: translateY(20px);
     transition: transform 0.3s ease;
 }
@@ -669,22 +671,22 @@ SKILLS
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .modal-header h2 {
     color: #a855f7;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0 0 4px 0;
 }
 
 .modal-header h3 {
     color: #111827;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
 }
 
 .modal-meta {
@@ -695,7 +697,7 @@ SKILLS
 .close-btn {
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #6b7280;
     cursor: pointer;
     line-height: 1;
@@ -706,36 +708,33 @@ SKILLS
     color: #111827;
 }
 
+.modal-body {
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
 .modal-body ul {
-    list-style: disc;
+    margin: 8px 0;
     padding-left: 20px;
-    margin: 0;
 }
 
 .modal-body li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
     color: #374151;
-    line-height: 1.7;
-    margin-bottom: 12px;
 }
 
-.modal-body li strong {
-    color: #111827;
-}
-
-/* Modal Skill Tags */
 .modal-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid #f3f4f6;
+    gap: 6px;
+    margin-top: 12px;
 }
 
 .skill-tag {
     padding: 4px 12px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: #8b5cf6;
     background-color: #f3e8ff;
@@ -783,6 +782,7 @@ SKILLS
     background: linear-gradient(90deg, #ec4899, #a855f7);
     border-radius: 2px;
 }
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -790,7 +790,8 @@ SKILLS
 }
 
 .projects-grid .project-card {
-    flex: 0 0 calc(50% - 1rem); /* Takes exactly 50% width minus half the gap */
+    flex: 0 0 calc(50% - 1rem);
+    /* Takes exactly 50% width minus half the gap */
     box-sizing: border-box;
 }
 
@@ -800,6 +801,7 @@ SKILLS
         flex: 0 0 100%;
     }
 }
+
 /* Responsive 4-Card Grid */
 
 
@@ -1143,44 +1145,46 @@ SKILLS
    ========================================== */
 
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    top: 70px; /* Adjust according to your navbar height */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 350px;
-    
-    /* FIX 1: Solid background so text behind it doesn't show through */
-    background-color: #ffffff !important; 
-    
-    /* FIX 2: High z-index to stay above all hero section elements */
-    z-index: 9999 !important; 
-    
-    /* Aesthetics & spacing */
-    border-radius: 16px;
-    padding: 20px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    
-    /* Layout */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        /* Adjust according to your navbar height */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 350px;
 
-  .nav-menu li {
-    width: 100%;
-    text-align: center;
-  }
+        /* FIX 1: Solid background so text behind it doesn't show through */
+        background-color: #ffffff !important;
 
-  .nav-menu a {
-    display: block;
-    padding: 10px 0;
-    color: #2b2d42; /* Clear dark text */
-    font-weight: 600;
-  }
+        /* FIX 2: High z-index to stay above all hero section elements */
+        z-index: 9999 !important;
+
+        /* Aesthetics & spacing */
+        border-radius: 16px;
+        padding: 20px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 0;
+        color: #2b2d42;
+        /* Clear dark text */
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1193,7 +1197,7 @@ SKILLS
 
     /* Hide GitHub button inside header on small screens to save space */
     header .visit-btn {
-        display: none; 
+        display: none;
     }
 
     .home .home-container {
@@ -1272,6 +1276,7 @@ SKILLS
 }
 
 @media (max-width: 480px) {
+
     /* Keep tab buttons horizontally scrollable instead of stacked */
     .tabs {
         flex-direction: row;
@@ -1301,8 +1306,14 @@ SKILLS
 }
 
 @media (max-width: 768px) {
-    section, .combined-section, .experience, .projects, .contact-section {
-        min-height: auto; /* Allow height to flow naturally based on content */
+
+    section,
+    .combined-section,
+    .experience,
+    .projects,
+    .contact-section {
+        min-height: auto;
+        /* Allow height to flow naturally based on content */
         padding: 4rem 5%;
     }
 }
@@ -1312,7 +1323,8 @@ SKILLS
    ========================================== */
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden; /* Stops horizontal wobble */
+        overflow-x: hidden;
+        /* Stops horizontal wobble */
     }
 
     header {
@@ -1323,7 +1335,8 @@ SKILLS
     }
 
     header .visit-btn {
-        display: none; /* Saves header space */
+        display: none;
+        /* Saves header space */
     }
 
     .nav-links {

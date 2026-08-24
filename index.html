@@ -217,26 +217,40 @@
 
                     <div class="modal-body">
                         <ul>
-                            <li>Led a data optimization initiative on <strong>40M+ treasury trade records</strong>,
-                                reducing end-of-day warehouse processing time by <strong>80%</strong>.</li>
-                            <li>Designed and automated ETL pipelines using SQL and Linux shell scripting to process
-                                high-volume datasets.</li>
-                            <li>Conducted trade-level P&amp;L analysis, anomaly detection, and risk exposure assessment
-                                for FX and derivatives.</li>
+                            <li>Led a data optimization and purging initiative on <strong>40M+ treasury trade
+                                    records</strong>,reducing end-of-day warehouse processing time by
+                                <strong>80%</strong> and improving
+                                overall warehouse performance..
+                            </li>
+                            <li>Built automated ETL pipelines using SQL and Linux shell scripting to safely purge
+                                high-volume trade data, ensuring data integrity and zero disruption to downstream
+                                treasury systems and reporting workflows.</li>
+                            <li>Performed trade-level P&L analysis and anomaly detection to resolve issues related to
+                                trade.</li>
+                            <li>Developed <strong>Java-like business logic within Murex</strong> for automated
+                                <strong>pre-trade and post-trade validation checks</strong>, enforcing trade and
+                                risk-related business rules.
+                            </li>
+                            <li>Collaborated with Treasury, Risk, and Front Office teams to translate financial
+                                requirements into scalable data workflows and optimized large-scale queries.</li>
                         </ul>
 
                         <div class="modal-skills">
                             <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Python</span>
                             <span class="skill-tag">Linux / Shell</span>
                             <span class="skill-tag">ETL Pipelines</span>
                             <span class="skill-tag">Murex</span>
+                            <span class="skill-tag">Java</span>
                             <span class="skill-tag">Data Optimization</span>
+                            <span class="skill-tag">P&amp;L Analysis</span>
+                            <span class="skill-tag">FX &amp; Derivatives</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Position: SPCE Robocon -->
+            <!-- Main Tab Content (Combined Summary View) -->
             <div class="tab-content" id="position">
                 <div class="card-top-info">
                     <div class="company-header">
@@ -245,12 +259,14 @@
                     </div>
                     <span class="location-tag">Mumbai, India</span>
                 </div>
-                <h4>Team Leader</h4>
-                <span class="time-period">Leadership Position</span>
+
+                <!-- Dual Role Display on Main Card -->
+                <h4>Team Captain &amp; Robotics Programmer</h4>
+                <span class="time-period">Sep 2020 – Jul 2022</span>
 
                 <p>
-                    Led the robotics team, coordinated members, managed project timelines, and represented the team
-                    during national Robocon competitions.
+                    Led a 21-member robotics team to AIR 19 (2021) and 94/100 in Stage 2 (2022) at DD Robocon, while
+                    engineering autonomous control logic using Python, C++, Raspberry Pi, and Arduino.
                 </p>
 
                 <button class="details-btn" onclick="openModal('positionModal')">
@@ -258,7 +274,7 @@
                 </button>
             </div>
 
-            <!-- Position Details Modal Overlay -->
+            <!-- Position Details Modal Overlay (Distinct Timelines & Details inside) -->
             <div id="positionModal" class="modal-overlay" onclick="closeModalOnOutsideClick(event, 'positionModal')">
                 <div class="modal-card">
                     <div class="modal-header">
@@ -266,8 +282,8 @@
                             <img src="spce_robocon.jpg" alt="SPCE Robocon Logo" class="modal-company-logo">
                             <div>
                                 <h2>SPCE Robocon</h2>
-                                <h3>Team Leader</h3>
-                                <span class="modal-meta">Leadership | Mumbai, India</span>
+                                <!-- <h3>Team Captain &amp; Robotics Programmer</h3>
+                                <span class="modal-meta">Sep 2020 – Jul 2022 | Mumbai, India</span> -->
                             </div>
                         </div>
                         <button class="close-btn" onclick="closeModal('positionModal')"
@@ -275,20 +291,45 @@
                     </div>
 
                     <div class="modal-body">
-                        <ul>
-                            <li>Managed cross-functional teams of engineers across mechanical, electronic, and software
-                                divisions to build autonomous and manual robots.</li>
-                            <li>Organized budget planning, project schedules, and component procurement for
-                                national-level competitions.</li>
-                            <li>Represented the institute at ABU Robocon, presenting technical strategies and
-                                coordinating pit support during matches.</li>
-                        </ul>
 
-                        <div class="modal-skills">
-                            <span class="skill-tag">Robotics</span>
+                        <!-- Section 1: Team Captain -->
+                        <div class="role-section">
+                            <h4 style="margin-bottom: 4px; color: #333;">Team Captain</h4>
+                            <span class="time-period"
+                                style="font-size: 0.85em; color: #666; display: block; margin-bottom: 8px;">Jun 2021 –
+                                Jul 2022</span>
+                            <ul>
+                                <li>Led a 21-member team across mechanical, electronics, and software divisions to build
+                                    competition-ready robots.</li>
+                                <li>Secured <strong>AIR 19</strong> (2021) and scored <strong>80/100 (Stage 1)</strong>
+                                    &amp; <strong>94/100 (Stage 2)</strong> at DD Robocon 2022.</li>
+                            </ul>
+                        </div>
+
+                        <hr style="margin: 16px 0; border: 0; border-top: 1px solid #eee;">
+
+                        <!-- Section 2: Robotics Programmer -->
+                        <div class="role-section">
+                            <h4 style="margin-bottom: 4px; color: #333;">Robotics Programmer</h4>
+                            <span class="time-period"
+                                style="font-size: 0.85em; color: #666; display: block; margin-bottom: 8px;">Sep 2020 –
+                                Jun 2022</span>
+                            <ul>
+                                <li>Engineered robot movement algorithms, control logic, and reusable software libraries
+                                    using Python and C++.</li>
+                                <li>Programmed Raspberry Pi and Arduino microcontrollers, integrating sensors, motor
+                                    drivers, and actuators.</li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-skills" style="margin-top: 16px;">
                             <span class="skill-tag">Team Leadership</span>
                             <span class="skill-tag">Project Management</span>
-                            <span class="skill-tag">Systems Engineering</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">Embedded Systems</span>
                         </div>
                     </div>
                 </div>
@@ -411,6 +452,7 @@
                     <span class="tag">Flask</span>
                     <span class="tag">Git & GitHub</span>
                     <span class="tag">AWS EC2</span>
+                    <span class="tag">Docker</span>
                 </div>
             </div>
 
@@ -430,8 +472,7 @@
                 </div>
 
                 <h3>Local RAG Document Q&amp;A</h3>
-                <p>Engineered an offline retrieval-augmented generation pipeline with vector search for document query
-                    resolution.</p>
+                <p>Engineered a fully local RAG pipeline for document Q&A using vector search and a local LLM.</p>
 
                 <div class="tech-tags">
                     <span class="tag">RAG</span>
@@ -441,8 +482,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-                    <a href="#" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                    <!-- <a href="#" target="_blank" class="btn btn-primary">Live Demo</a> -->
+                    <a href="https://github.com/lishachaudhari/secure-document-qa-system" target="_blank"
+                        class="btn btn-secondary">GitHub Repo</a>
                 </div>
             </div>
 
@@ -453,8 +495,8 @@
                 </div>
 
                 <h3>Autonomous A/B Test Insight Agent</h3>
-                <p>Built an AI-powered dashboard automating hypothesis testing, statistical analysis, and decision
-                    insights.</p>
+                <p>Built a multi-agent AI engine that automates statistical hypothesis testing, conversion funnels,
+                    cohort analysis, and executive insight generation.</p>
 
                 <div class="tech-tags">
                     <span class="tag">Python</span>
@@ -464,8 +506,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-                    <a href="#" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                    <!-- <a href="#" target="_blank" class="btn btn-primary">Live Demo</a> -->
+                    <a href="https://github.com/lishachaudhari/Autonomous-Data-Analysis-Insights-Platform"
+                        target="_blank" class="btn btn-secondary">GitHub Repo</a>
                 </div>
             </div>
 
