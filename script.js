@@ -121,31 +121,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-menuIcon = document.querySelector('#menu-icon');
-navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    // Tries ID first, then falls back to class if ID doesn't exist
+    const menuIcon = document.querySelector('#menu-icon') || document.querySelector('.menu-icon') || document.querySelector('header i');
+    const navLinks = document.querySelector('.nav-links');
 
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-
-    if (navLinks.classList.contains('active')) {
-        // Force critical layout styles directly onto the element
-        Object.assign(navLinks.style, {
-            display: 'flex',
-            position: 'fixed',
-            top: '85px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '88%',
-            maxWidth: '360px',
-            backgroundColor: '#ffffff',
-            padding: '20px',
-            borderRadius: '20px',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-            zIndex: '999999',
-            flexDirection: 'column',
-            alignItems: 'center'
-        });
-    } else {
-        navLinks.style.display = 'none';
+    if (!menuIcon || !navLinks) {
+        console.error('Menu element not found. Check HTML IDs/classes.');
+        return;
     }
+
+    menuIcon.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents click bleeding
+        navLinks.classList.toggle('active');
+
+        if (navLinks.classList.contains('active')) {
+            // Apply layout & prevent content bleed
+            Object.assign(navLinks.style, {
+                display: 'flex',
+                position: 'fixed',
+                top: '85px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '88%',
+                maxWidth: '360px',
+                backgroundColor: '#ffffff',
+                padding: '24px 16px',
+                borderRadius: '20px',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+                zIndex: '999999',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '16px'
+            });
+
+            // Ensure links are visible and dark gray
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.style.color = '#1f2937';
+                link.style.fontWeight = '600';
+                link.style.display = 'block';
+            });
+        } else {
+            navLinks.style.display = 'none';
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+            navLinks.classList.remove('active');
+            navLinks.style.display = 'none';
+        }
+    });
 });
