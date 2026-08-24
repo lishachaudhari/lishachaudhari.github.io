@@ -1074,6 +1074,17 @@ li a:hover::before {
 /* ==========================================
    12. MEDIA QUERIES (RESPONSIVE DESIGN)
    ========================================== */
+
+   .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Ensure links inside nav-links have clear text color */
+.nav-links li a {
+    color: #1f2937 !important;
+    font-weight: 600;
+}
 @media (max-width: 768px) {
     section,
     .combined-section,
