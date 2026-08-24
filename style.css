@@ -1088,6 +1088,7 @@ li a:hover::before {
         width: 92%;
         gap: 0.5rem;
         padding: 0.6rem 1rem;
+        z-index: 10000; /* Ensure header stays on top */
     }
 
     header .visit-btn {
@@ -1100,21 +1101,24 @@ li a:hover::before {
 
     .nav-links {
         position: fixed;
-        top: 75px;
+        top: 80px;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
         max-width: 350px;
-        background-color: #ffffff;
-        border-radius: 16px;
-        padding: 20px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        /* Solid background + backdrop filter to prevent content bleed */
+        background-color: #ffffff; 
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 24px 0;
+        /* Pronounced shadow to pop off background text */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-        z-index: 9999;
+        gap: 18px;
+        z-index: 99999; /* Higher than any main section elements */
     }
 
     .nav-links.active {
@@ -1131,6 +1135,7 @@ li a:hover::before {
         padding: 8px 0;
         color: #1f2937;
         font-weight: 600;
+        font-size: 1.05rem;
     }
 
     .home .home-container {

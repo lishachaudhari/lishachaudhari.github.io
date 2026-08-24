@@ -119,3 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Prevents background page from scrolling while menu is open
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+});
