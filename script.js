@@ -119,11 +119,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
+
+
+menuIcon = document.querySelector('#menu-icon');
+navLinks = document.querySelector('.nav-links');
 
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    // Prevents background page from scrolling while menu is open
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+
+    if (navLinks.classList.contains('active')) {
+        // Force critical layout styles directly onto the element
+        Object.assign(navLinks.style, {
+            display: 'flex',
+            position: 'fixed',
+            top: '85px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '88%',
+            maxWidth: '360px',
+            backgroundColor: '#ffffff',
+            padding: '20px',
+            borderRadius: '20px',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            zIndex: '999999',
+            flexDirection: 'column',
+            alignItems: 'center'
+        });
+    } else {
+        navLinks.style.display = 'none';
+    }
 });
