@@ -122,53 +122,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Tries ID first, then falls back to class if ID doesn't exist
-    const menuIcon = document.querySelector('#menu-icon') || document.querySelector('.menu-icon') || document.querySelector('header i');
+    // Select the toggle button and menu
+    const menuBtn = document.querySelector('#menu-icon, .menu-icon, header i, header svg, header .bx-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    if (!menuIcon || !navLinks) {
-        console.error('Menu element not found. Check HTML IDs/classes.');
+    console.log('Menu Button Found:', menuBtn);
+    console.log('Nav Links Found:', navLinks);
+
+    if (!menuBtn || !navLinks) {
+        console.error('JS Error: Could not find menuBtn or navLinks in DOM.');
         return;
     }
 
-    menuIcon.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevents click bleeding
-        navLinks.classList.toggle('active');
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-        if (navLinks.classList.contains('active')) {
-            // Apply layout & prevent content bleed
-            Object.assign(navLinks.style, {
-                display: 'flex',
-                position: 'fixed',
-                top: '85px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '88%',
-                maxWidth: '360px',
-                backgroundColor: '#ffffff',
-                padding: '24px 16px',
-                borderRadius: '20px',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
-                zIndex: '999999',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '16px'
-            });
+        const isOpen = navLinks.classList.contains('active');
+        console.log('Menu clicked! Is currently open?:', isOpen);
 
-            // Ensure links are visible and dark gray
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.style.color = '#1f2937';
-                link.style.fontWeight = '600';
-                link.style.display = 'block';
+        if (!isOpen) {
+            navLinks.classList.add('active');
+            navLinks.setAttribute('style', `
+                display: flex !important;
+                position: fixed !important;
+                top: 85px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 88% !important;
+                max-width: 360px !important;
+                background-color: #ffffff !important;
+                padding: 24px 16px !important;
+                border-radius: 20px !important;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+                z-index: 999999 !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 16px !important;
+            `);
+
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.style.color = '#1f2937';
+                a.style.fontWeight = '600';
             });
         } else {
+            navLinks.classList.remove('active');
             navLinks.style.display = 'none';
         }
     });
 
-    // Close menu when clicking outside
+    // Close when clicking outside menu
     document.addEventListener('click', (e) => {
-        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+        if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
             navLinks.classList.remove('active');
             navLinks.style.display = 'none';
         }
