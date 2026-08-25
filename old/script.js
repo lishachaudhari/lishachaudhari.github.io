@@ -11,25 +11,6 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// Close the mobile menu whenever a nav link is tapped
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        menuIcon.classList.remove('fa-xmark');
-        navbar.classList.remove('active');
-    });
-});
-
-// Close the mobile menu when tapping/clicking outside of it
-document.addEventListener('click', (e) => {
-    const isClickInsideMenu = navbar.contains(e.target);
-    const isClickOnIcon = menuIcon.contains(e.target);
-
-    if (navbar.classList.contains('active') && !isClickInsideMenu && !isClickOnIcon) {
-        menuIcon.classList.remove('fa-xmark');
-        navbar.classList.remove('active');
-    }
-});
-
 
 
 
